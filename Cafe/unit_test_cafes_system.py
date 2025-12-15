@@ -8,21 +8,21 @@ class TestCafeSystem(unittest.TestCase):
         self.assertEqual(item.getPrice(), 5.00)
 
     def test_order_add_item(self):
-        customer = Customer("Alex")
+        customer = Customer("Thawhid")
         order = Order("1", customer)
         item = DrinkItem("Latte", 3.50, "Large")
         order.addItem(item)
         self.assertEqual(len(order.orderItems), 1)
 
     def test_order_total_calculation(self):
-        customer = Customer("Sam")
+        customer = Customer("Arshad")
         order = Order("2", customer)
         order.addItem(FoodItem("Salad", 3.90, "Healthy"))
         order.addItem(DrinkItem("Tea", 1.80, "Medium"))
         self.assertAlmostEqual(order.calculateTotal(), 5.70)
 
     def test_bill_calculation(self):
-        customer = Customer("Jamie")
+        customer = Customer("Jawad")
         order = Order("3", customer)
         order.addItem(DrinkItem("Coffee", 2.00, "Small"))
         bill = order.generateBill()
