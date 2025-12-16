@@ -121,6 +121,8 @@ class Order:
                 print(f"{i}. {item.getDetails()}")
             print(f"Total so far: £{self.calculateTotal():.2f}\n")
 
+     # Final reciept - Contains Order ID, Bill ID, Customer Name, items and total
+
 
 class Bill:
     def __init__(self, billId: str, order: Order, totalAmount: float, tax: float):
